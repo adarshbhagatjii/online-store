@@ -5,7 +5,10 @@ export const ProductContext = createContext();
 
 
 const Context = (props) => {
-   const  [products, setProducts] = useState(null);
+   //const  [products, setProducts] = useState(JSON.parse(localStorage.getItem('products'))||null);
+   const  [products, setProducts] = useState();
+
+
    const getProducts  = async () => {
     try {
         const {data} = await axios("/products");
